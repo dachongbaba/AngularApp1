@@ -1,0 +1,51 @@
+<div class="about" [class.is-mobile]="mobileQuery.matches" [class.is-small]="smallQuery.matches">
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="drawerRight.toggle();">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1>Responsive App</h1>
+  </mat-toolbar>
+  <mat-drawer-container
+          class="drawer-container"
+          autosize>
+    <mat-drawer
+            #drawer
+            mode="over"
+            position="start"
+            class="drawer"
+            [opened]="open"
+            [style.width]="mobileQuery.matches ? '100%' : '300px'">
+      left side
+    </mat-drawer>
+    <mat-drawer
+            #drawerRight
+            mode="over"
+            position="end"
+            class="drawer"
+            [opened]="open"
+            [style.width]="mobileQuery.matches ? '100%' : '300px'">
+      left side
+    </mat-drawer>
+    <mat-drawer-content class="drawer-content page-left" [class.page-active]="page === 0">
+      <button mat-icon-button class="page-btn page-btn-next" style="float:right;" (click)="nextPage()">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+      1
+    </mat-drawer-content>
+    <mat-drawer-content class="drawer-content page-center" [class.page-active]="page === 1">
+      <button mat-icon-button class="page-btn page-btn-prev" style="float:left;" (click)="prevPage()">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+      <button mat-icon-button class="page-btn page-btn-next" style="float:right;" (click)="nextPage()">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+      2
+    </mat-drawer-content>
+    <mat-drawer-content class="drawer-content page-right" [class.page-active]="page === 2">
+      <button mat-icon-button class="page-btn page-btn-prev" style="float:left;" (click)="prevPage()">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+      3
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
