@@ -3,15 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AppComponent as DashBoardAppComponent } from '../dashboard/app.component';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DashBoardAppComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
+    DashboardModule,
     AppRoutingModule
   ],
   providers: [],

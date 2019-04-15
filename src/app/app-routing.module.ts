@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent as DashBoardAppComponent } from '../dashboard/app.component';
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  {
-    path: 'dashboard',
-    component: DashBoardAppComponent,
-    data: { title: 'DashBoard App' }
-  },
+  // {
+  //    path: 'dashboard',
+  //    loadChildren: './dashboard/dashboard.module#DashboardModule'
+  // },
   {
     path: '',
     redirectTo: '/dashboard',
     pathMatch: 'full'
+  },
+  {
+    path: '',
+    component: AppComponent
   }
 ];
 
