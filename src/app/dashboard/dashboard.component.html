@@ -1,5 +1,5 @@
-<div class="dashboard">
-  <mat-toolbar color="primary">
+<div class="dashboard" [class.dashboard-is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="primary" class="toolbar">
     <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
     <h1 class="example-app-name">Responsive App</h1>
   </mat-toolbar>
@@ -8,7 +8,7 @@
     [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
     <mat-sidenav class="sidenav"
       #snav
-      opened
+      [opened]="open"
       [mode]="mobileQuery.matches ? 'over' : 'side'"
       [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
       <mat-nav-list>

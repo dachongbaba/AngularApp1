@@ -7,6 +7,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnDestroy {
+  open = false;
   mobileQuery: MediaQueryList;
   private mobileQueryListener: () => void;
 
