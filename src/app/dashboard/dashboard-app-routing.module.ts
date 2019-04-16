@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DashboardComponent } from './dashboard.component';
+import { DashboardAppComponent } from './dashboard-app.component';
 import { HomeComponent } from './views/home.component';
 import { AboutComponent } from './views/about.component';
 import { PageComponent } from './views/page.component';
@@ -8,7 +8,7 @@ import { PageComponent } from './views/page.component';
 const routes: Routes = [
   {
     path: 'dashboard',
-    component: DashboardComponent,
+    component: DashboardAppComponent,
     children: [
       {
         path: 'home',
@@ -34,4 +34,4 @@ const routes: Routes = [
     RouterModule
   ]
 })
-export class DashboardRoutingModule { }
+export class DashboardAppRoutingModule { }

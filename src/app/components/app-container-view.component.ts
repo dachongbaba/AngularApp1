@@ -2,11 +2,11 @@ import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
 
 @Component({
-  selector: 'app-container',
-  templateUrl: './container.component.html',
-  styleUrls: ['./container.component.scss'],
+  selector: 'app-container-view',
+  templateUrl: './app-container-view.component.html',
+  styleUrls: ['./app-container-view.component.scss'],
 })
-export class ContainerComponent {
+export class ContainerViewComponent implements OnDestroy{
   open = false;
   page = 0;
   mobileQuery: MediaQueryList;

@@ -10,8 +10,8 @@ import {
   MatButtonModule,
 } from '@angular/material';
 
-import { ContainerComponent } from './container.component';
-import { ContainerViewComponent } from './container-view.component';
+import { ContainerComponent } from './app-container.component';
+import { ContainerViewComponent } from './app-container-view.component';
 
 @NgModule({
   declarations: [

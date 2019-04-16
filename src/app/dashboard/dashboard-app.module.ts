@@ -11,8 +11,8 @@ import {
   MatButtonModule,
 } from '@angular/material';
 
-import { DashboardRoutingModule } from './dashboard-routing.module';
-import { DashboardComponent } from './dashboard.component';
+import { DashboardAppRoutingModule } from './dashboard-app-routing.module';
+import { DashboardAppComponent } from './dashboard-app.component';
 import { HomeComponent } from './views/home.component';
 import { AboutComponent } from './views/about.component';
 import { PageComponent } from './views/page.component';
@@ -20,7 +20,7 @@ import { PageComponent } from './views/page.component';
 
 @NgModule({
   declarations: [
-    DashboardComponent,
+    DashboardAppComponent,
     HomeComponent,
     AboutComponent,
     PageComponent,
@@ -35,7 +35,7 @@ import { PageComponent } from './views/page.component';
     MatIconModule,
     MatButtonModule,
     AppComponentsModule,
-    DashboardRoutingModule,
+    DashboardAppRoutingModule,
   ]
 })
-export class DashboardModule { }
+export class DashboardAppModule { }

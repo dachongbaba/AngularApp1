@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardModule } from './dashboard/dashboard.module';
+import { DashboardAppModule } from './dashboard/dashboard-app.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
   ],
   imports: [
     BrowserModule,
-    DashboardModule,
+    DashboardAppModule,
     AppRoutingModule
   ],
   providers: [],
