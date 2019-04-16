@@ -1,6 +1,4 @@
-
-
-.about {
+.view {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -112,4 +110,3 @@
   flex: 0 1 auto;
   display: none;
 }
-

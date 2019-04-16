@@ -7,17 +7,14 @@ import {
   MatMenuModule,
   MatListModule,
   MatIconModule,
-  MatButtonModule,
+  MatButtonModule
 } from '@angular/material';
 
-import { ContainerComponent } from './app-container.component';
-import { ContainerViewComponent } from './app-container-view.component';
+import { AppContainerComponent } from './app-container.component';
+import { AppContainerViewComponent } from './app-container-view.component';
 
 @NgModule({
-  declarations: [
-    ContainerComponent,
-    ContainerViewComponent,
-  ],
+  declarations: [AppContainerComponent, AppContainerViewComponent],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
@@ -26,11 +23,8 @@ import { ContainerViewComponent } from './app-container-view.component';
     MatMenuModule,
     MatListModule,
     MatIconModule,
-    MatButtonModule,
+    MatButtonModule
   ],
-  exports: [
-    ContainerComponent,
-    ContainerViewComponent
-  ]
+  exports: [AppContainerComponent, AppContainerViewComponent]
 })
-export class AppComponentsModule { }
+export class AppComponentsModule {}

@@ -4,7 +4,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard-app.component.html',
-  styleUrls: ['./dashboard-app.component.css']
+  styleUrls: ['./dashboard-app.component.scss']
 })
 export class DashboardAppComponent implements OnDestroy {
   open = false;

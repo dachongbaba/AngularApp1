@@ -1,25 +1,11 @@
-<div class="dashboard" [class.dashboard-is-mobile]="mobileQuery.matches">
-  <mat-toolbar color="primary" class="toolbar">
-    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-    <h1 class="example-app-name">Responsive App</h1>
-  </mat-toolbar>
-  <mat-sidenav-container
-    class="sidenav-container"
-    [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-    <mat-sidenav class="sidenav"
-      #snav
-      [opened]="open"
-      [mode]="mobileQuery.matches ? 'over' : 'side'"
-      [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
-      <mat-nav-list>
-        <a mat-list-item routerLink="home">home</a>
-        <a mat-list-item routerLink="about">about</a>
-        <a mat-list-item routerLink="page">page</a>
-      </mat-nav-list>
-    </mat-sidenav>
-
-    <mat-sidenav-content class="content">
-      <router-outlet></router-outlet>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-</div>
+<app-container>
+  <ng-container appbar>
+    <h1 class="example-app-name">Dashboard</h1>
+  </ng-container>
+  <mat-nav-list left style="width:300px">
+    <a mat-list-item routerLink="home">home</a>
+    <a mat-list-item routerLink="about">about</a>
+    <a mat-list-item routerLink="page">page</a>
+  </mat-nav-list>
+  <router-outlet></router-outlet>
+</app-container>

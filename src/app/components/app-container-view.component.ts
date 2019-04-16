@@ -1,12 +1,12 @@
-import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
-import {MediaMatcher} from '@angular/cdk/layout';
+import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
+import { BreakpointObserver, Breakpoints, MediaMatcher } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-container-view',
   templateUrl: './app-container-view.component.html',
-  styleUrls: ['./app-container-view.component.scss'],
+  styleUrls: ['./app-container-view.component.css']
 })
-export class ContainerViewComponent implements OnDestroy{
+export class AppContainerViewComponent implements OnDestroy {
   open = false;
   page = 0;
   mobileQuery: MediaQueryList;

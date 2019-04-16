@@ -13,7 +13,9 @@
     "prod": "ng build --prod --build-optimizer --vendor-chunk",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "format:fix": "pretty-quick --staged",
+    "format:check": "prettier --config ./.prettierrc --list-different \"src/{app,environments,assets}/**/*{.ts,.js,.json,.css,.scss}\""
   },
   "private": true,
   "dependencies": {
@@ -27,6 +29,7 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
     "hammerjs": "^2.0.8",
     "jquery": "^3.3.1",
@@ -52,6 +55,9 @@
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
     "ng-packagr": "^4.2.0",
+    "node-sass": "^4.11.0",
+    "prettier": "^1.17.0",
+    "pretty-quick": "^1.10.0",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tsickle": ">=0.34.0",
