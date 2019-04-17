@@ -35,12 +35,12 @@ export class AppContainerLayoutComponent implements OnInit, OnDestroy {
 
   private activateWebLayout() {
     this.toggleDrawer(this.drawerLeft, 'side', true);
-    this.toggleDrawer(this.drawerRight, 'side', false);
+    //this.toggleDrawer(this.drawerRight, 'side', false);
   }
 
   private activateHandsetLayout() {
     this.toggleDrawer(this.drawerLeft, 'over', false);
-    this.toggleDrawer(this.drawerRight, 'over', false);
+    //this.toggleDrawer(this.drawerRight, 'over', false);
   }
 
   private toggleDrawer(drawer: Drawer, mode: DrawerMode, open: DrawerOpen) {
@@ -50,9 +50,11 @@ export class AppContainerLayoutComponent implements OnInit, OnDestroy {
     }
   }
 
-  ngOnInit(): void {
+  toggleLeft() {
+    this.drawerLeft.toggle();
   }
 
-  ngOnDestroy(): void {
+  toggleRight() {
+    this.drawerRight.toggle();
   }
 }

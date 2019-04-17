@@ -47,4 +47,12 @@ export class AppContainerComponent {
     sideNav.mode = mode;
     sideNav.opened = open;
   }
+
+  toggleLeft() {
+    this.sideNavLeft.toggle();
+  }
+
+  toggleRight() {
+    this.sideNavRight.toggle();
+  }
 }

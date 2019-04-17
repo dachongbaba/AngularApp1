@@ -1,8 +1,11 @@
-<app-container>
+<app-container #appContainer>
   <ng-container appbar>
-    <h1 class="mr-auto">Dashboard</h1>
-    <button mat-icon-button>
+    <button mat-icon-button (click)="toggleLeft()">
       <mat-icon>apps</mat-icon>
+    </button>
+    <h1 class="mr-auto">Dashboard</h1>
+    <button mat-icon-button (click)="toggleRight()">
+      <mat-icon>more</mat-icon>
     </button>
   </ng-container>
   <mat-nav-list right style="width:200px">

@@ -19,11 +19,16 @@ const routes: Routes = [
         component: AboutComponent,
       },
       {
-        path: 'page',
+        path: '',
         component: PageComponent,
       }
     ]
-  }
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({

@@ -1,23 +1,20 @@
-import { Component, ChangeDetectorRef, OnDestroy } from '@angular/core';
-import { MediaMatcher } from '@angular/cdk/layout';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { AppContainerComponent } from '../components/app-container.component';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnDestroy {
-  open = false;
-  mobileQuery: MediaQueryList;
-  private mobileQueryListener: () => void;
+export class DashboardComponent {
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
-    this.mobileQuery = media.matchMedia('(max-width: 1024px)');
-    this.mobileQueryListener = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this.mobileQueryListener);
+  @ViewChild('appContainer') appContainer: AppContainerComponent;
+
+  toggleLeft() {
+    this.appContainer.toggleLeft();
   }
 
-  ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this.mobileQueryListener);
+  toggleRight() {
+    this.appContainer.toggleRight();
   }
 }
