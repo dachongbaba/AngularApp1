@@ -1,12 +1,15 @@
-import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, OnDestroy } from '@angular/core';
 import { BreakpointObserver, Breakpoints, MediaMatcher } from '@angular/cdk/layout';
+import { ViewChild, ElementRef, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Component({
   selector: 'app-container-view',
   templateUrl: './app-container-view.component.html',
   styleUrls: ['./app-container-view.component.css']
 })
-export class AppContainerViewComponent implements OnDestroy {
+export class AppContainerViewComponent implements OnInit, OnDestroy {
+  @ViewChild('customerContent') customerContent: ElementRef;
+
   open = false;
   page = 0;
   mobileQuery: MediaQueryList;
@@ -23,6 +26,10 @@ export class AppContainerViewComponent implements OnDestroy {
     this.mobileQuery.addListener(this.mobileQueryListener);
   }
 
+  ngOnInit(): void {
+    console.dir(this.customerContent);
+  }
+
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this.mobileQueryListener);
   }
@@ -34,4 +41,5 @@ export class AppContainerViewComponent implements OnDestroy {
   nextPage(): void {
     this.page += 1;
   }
+
 }

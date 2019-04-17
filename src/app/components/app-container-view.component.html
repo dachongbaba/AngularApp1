@@ -1,51 +1,31 @@
-<div class="d-flex flex-row h-100">
-  <mat-toolbar color="primary">
-    <button mat-icon-button (click)="drawerRight.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <h1>Responsive App</h1>
-  </mat-toolbar>
-  <mat-drawer-container class="drawer-container" autosize>
+<section class="d-flex flex-column h-100">
+  <ng-content select="[toolbar]"></ng-content>
+  <mat-drawer-container class="d-flex flex-grow-1 flex-row h-100">
     <mat-drawer
-      #drawer
-      mode="over"
-      position="start"
-      class="drawer"
-      [opened]="open"
-      [style.width]="mobileQuery.matches ? '100%' : '300px'"
+            #drawerLeft
+            mode="over"
+            position="start"
     >
       <ng-content select="[drawerLeft]"></ng-content>
     </mat-drawer>
     <mat-drawer
-      #drawerRight
-      mode="over"
-      position="end"
-      class="drawer"
-      [opened]="open"
-      [style.width]="mobileQuery.matches ? '100%' : '300px'"
+            #drawerLeft
+            mode="over"
+            position="end"
     >
-      <ng-content select="[drawerRight]"></ng-content>
+      <ng-content select="[drawerLeft]"></ng-content>
     </mat-drawer>
-    <mat-drawer-content class="drawer-content page-left" [class.page-active]="page === 0">
-      <ng-content select="[left]"></ng-content>
-      <button mat-icon-button class="page-btn page-btn-next" style="float:right;" (click)="nextPage()">
-        <mat-icon>chevron_right</mat-icon>
-      </button>
+
+    <mat-drawer-content class="d-flex flex-row flex-grow-1 h-100">
+      <div class="flex-shrink-1" #customerContent>
+        <ng-content></ng-content>
+      </div>
+      <ng-container *ngIf="!customerContent.hasChildNodes()">
+        <div class="col-10"><ng-content select="[left]"></ng-content></div>
+        <div class="flex-grow-1"><ng-content select="[center]"></ng-content></div>
+        <div class="col-10"><ng-content select="[right]"></ng-content></div>
+      </ng-container>
     </mat-drawer-content>
-    <mat-drawer-content class="drawer-content page-center" [class.page-active]="page === 1">
-      <ng-content select="[body]"></ng-content>
-      <button mat-icon-button class="page-btn page-btn-prev" style="float:left;" (click)="prevPage()">
-        <mat-icon>chevron_left</mat-icon>
-      </button>
-      <button mat-icon-button class="page-btn page-btn-next" style="float:right;" (click)="nextPage()">
-        <mat-icon>chevron_right</mat-icon>
-      </button>
-    </mat-drawer-content>
-    <mat-drawer-content class="drawer-content page-right" [class.page-active]="page === 2">
-      <ng-content select="[right]"></ng-content>
-      <button mat-icon-button class="page-btn page-btn-prev" style="float:left;" (click)="prevPage()">
-        <mat-icon>chevron_left</mat-icon>
-      </button>
-    </mat-drawer-content>
+
   </mat-drawer-container>
-</div>
+</section>
