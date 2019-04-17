@@ -9,7 +9,7 @@
     "ng-library": "ng generate library",
     "ng-gen": "ng generate",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --vendor-chunk",
     "prod": "ng build --prod --build-optimizer --vendor-chunk",
     "test": "ng test",
     "lint": "ng lint",
