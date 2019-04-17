@@ -1,11 +1,12 @@
 <app-container-view>
-  <mat-toolbar toolbar>
-    <button mat-icon-button (click)="drawerRight.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <h2>Page</h2>
-  </mat-toolbar>
-  <div class="vw-100">aaa</div>
+  <ng-container toolbar><h2>Page</h2></ng-container>
+
+  <mat-nav-list drawerLeft style="width:300px">
+    <a mat-list-item routerLink="home">home</a>
+    <a mat-list-item routerLink="about">about</a>
+    <a mat-list-item routerLink="page">page</a>
+  </mat-nav-list>
+
   <ng-container left>left</ng-container>
   <ng-container center>body</ng-container>
   <ng-container right>right</ng-container>

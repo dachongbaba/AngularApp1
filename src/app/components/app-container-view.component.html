@@ -1,23 +1,18 @@
-<section class="d-flex flex-column h-100">
-  <ng-content select="[toolbar]"></ng-content>
-  <mat-drawer-container class="d-flex flex-grow-1 flex-row h-100">
-    <mat-drawer
-            #drawerLeft
-            mode="over"
-            position="start"
-    >
-      <ng-content select="[drawerLeft]"></ng-content>
-    </mat-drawer>
-    <mat-drawer
-            #drawerLeft
-            mode="over"
-            position="end"
-    >
+<ng-container>
+  <mat-toolbar>
+    <button mat-icon-button (click)="drawerLeft.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <ng-content select="[toolbar]"></ng-content>
+  </mat-toolbar>
+
+  <mat-drawer-container class="flex-grow-1 d-flex flex-column">
+    <mat-drawer #drawerLeft position="start">
       <ng-content select="[drawerLeft]"></ng-content>
     </mat-drawer>
 
-    <mat-drawer-content class="d-flex flex-row flex-grow-1 h-100">
-      <div class="flex-shrink-1" #customerContent>
+    <mat-drawer-content class="flex-grow-1 d-flex flex-row">
+      <div class="flex-shrink-1 w-100" #customerContent>
         <ng-content></ng-content>
       </div>
       <ng-container *ngIf="!customerContent.hasChildNodes()">
@@ -27,5 +22,8 @@
       </ng-container>
     </mat-drawer-content>
 
+    <mat-drawer #drawerRight position="end">
+      <ng-content select="[drawerRight]"></ng-content>
+    </mat-drawer>
   </mat-drawer-container>
-</section>
+</ng-container>

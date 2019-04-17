@@ -1,41 +1,29 @@
-<div class="home" [class.is-mobile]="mobileQuery.matches">
-  <mat-toolbar color="primary">
-    <button mat-icon-button (click)="drawer.toggle();">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <h1>Responsive App</h1>
-  </mat-toolbar>
-  <mat-drawer-container
-    class="drawer-container"
-    autosize>
-    <mat-drawer
-      #drawer
-      mode="over"
-      position="start"
-      class="drawer"
-      [opened]="open"
-      [style.width]="mobileQuery.matches ? '100%' : '300px'">
-      side
-    </mat-drawer>
-    <mat-drawer-content class="drawer-content">
-      <div class="page page-left" [class.page-active]="mobileQuery.matches && page === 0">div1
-        <button mat-icon-button class="page-btn page-btn-next" style="float:right;" (click)="nextPage()">
-          <mat-icon>chevron_right</mat-icon>
-        </button>
-      </div>
-      <div class="page page-center" [class.page-active]="mobileQuery.matches && page === 1">div2
-        <button mat-icon-button class="page-btn page-btn-prev" style="float:left;" (click)="prevPage()">
-          <mat-icon>chevron_left</mat-icon>
-        </button>
-        <button mat-icon-button class="page-btn page-btn-next" style="float:right;" (click)="nextPage()">
-          <mat-icon>chevron_right</mat-icon>
-        </button>
-      </div>
-      <div class="page page-right" [class.page-active]="mobileQuery.matches && page === 2">div3
-        <button mat-icon-button class="page-btn page-btn-prev" style="float:left;" (click)="prevPage()">
-          <mat-icon>chevron_left</mat-icon>
-        </button>
-      </div>
-    </mat-drawer-content>
-  </mat-drawer-container>
-</div>
+<app-container-view>
+  <div class="jumbotron bg-info text-white rounded-0 m-0">
+    <div class="container">
+      <h1 class="display-4">Hello, world!</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography band spacing to space content out within the larger container.</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+  </div>
+  <div class="jumbotron bg-light text-dark rounded-0 m-0">
+    <div class="container">
+      <h1 class="display-4">Hello, world!</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+  </div>
+  <div class="jumbotron bg-warning text-dark rounded-0 m-0">
+    <div class="container">
+      <h1 class="display-4">Hello, world!</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+  </div>
+</app-container-view>
