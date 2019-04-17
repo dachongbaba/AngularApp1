@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardAppModule } from './dashboard/dashboard-app.module';
+import { AdminAppModule } from './admin/admin-app.module';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { DashboardAppModule } from './dashboard/dashboard-app.module';
   imports: [
     BrowserModule,
     DashboardAppModule,
+    AdminAppModule,
     AppRoutingModule
   ],
   providers: [],

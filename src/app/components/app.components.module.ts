@@ -12,9 +12,13 @@ import {
 
 import { AppContainerComponent } from './app-container.component';
 import { AppContainerViewComponent } from './app-container-view.component';
-
+import { AppContainerLayoutComponent } from './app-container-layout.component';
 @NgModule({
-  declarations: [AppContainerComponent, AppContainerViewComponent],
+  declarations: [
+    AppContainerComponent,
+    AppContainerViewComponent,
+    AppContainerLayoutComponent
+  ],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
@@ -25,6 +29,10 @@ import { AppContainerViewComponent } from './app-container-view.component';
     MatIconModule,
     MatButtonModule
   ],
-  exports: [AppContainerComponent, AppContainerViewComponent]
+  exports: [
+    AppContainerComponent,
+    AppContainerViewComponent,
+    AppContainerLayoutComponent
+  ]
 })
 export class AppComponentsModule {}

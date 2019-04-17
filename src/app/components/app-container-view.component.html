@@ -1,29 +1,11 @@
 <ng-container>
-  <mat-toolbar>
-    <button mat-icon-button (click)="drawerLeft.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <ng-content select="[toolbar]"></ng-content>
-  </mat-toolbar>
+  <div class="flex-shrink-0">
+    <ng-content select="[top]"></ng-content>
+  </div>
 
-  <mat-drawer-container class="flex-grow-1 d-flex flex-column">
-    <mat-drawer #drawerLeft position="start">
-      <ng-content select="[drawerLeft]"></ng-content>
-    </mat-drawer>
+  <ng-content></ng-content>
 
-    <mat-drawer-content class="flex-grow-1 d-flex flex-row">
-      <div class="flex-shrink-1 w-100" #customerContent>
-        <ng-content></ng-content>
-      </div>
-      <ng-container *ngIf="!customerContent.hasChildNodes()">
-        <div class="col-10"><ng-content select="[left]"></ng-content></div>
-        <div class="flex-grow-1"><ng-content select="[center]"></ng-content></div>
-        <div class="col-10"><ng-content select="[right]"></ng-content></div>
-      </ng-container>
-    </mat-drawer-content>
-
-    <mat-drawer #drawerRight position="end">
-      <ng-content select="[drawerRight]"></ng-content>
-    </mat-drawer>
-  </mat-drawer-container>
+  <div class="flex-shrink-0">
+    <ng-content select="[bottom]"></ng-content>
+  </div>
 </ng-container>

@@ -20,7 +20,7 @@ export class AppContainerComponent {
 
   constructor(breakpointObserver: BreakpointObserver) {
     breakpointObserver.observe([
-      Breakpoints.XLarge
+      Breakpoints.Large
     ]).subscribe(result => {
       console.log('Breakpoin', result.matches, result.breakpoints)
       if (result.matches) {

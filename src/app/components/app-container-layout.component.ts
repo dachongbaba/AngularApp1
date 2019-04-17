@@ -9,12 +9,12 @@ type DrawerMode = 'over' | 'push' | 'side';
 type DrawerOpen = boolean;
 
 @Component({
-  selector: 'app-container-view',
-  templateUrl: './app-container-view.component.html',
-  styleUrls: ['./app-container-view.component.scss'],
+  selector: 'app-container-layout',
+  templateUrl: './app-container-layout.component.html',
+  styleUrls: ['./app-container-layout.component.scss'],
   host: {class: 'd-flex flex-column h-100'}
 })
-export class AppContainerViewComponent implements OnInit, OnDestroy {
+export class AppContainerLayoutComponent implements OnInit, OnDestroy {
   @ViewChild('toolbar') toolbar: Toolbar;
   @ViewChild('drawerLeft') drawerLeft: Drawer;
   @ViewChild('drawerRight') drawerRight: Drawer;
@@ -24,7 +24,8 @@ export class AppContainerViewComponent implements OnInit, OnDestroy {
       Breakpoints.Medium,
       Breakpoints.Large,
     ]).subscribe(result => {
-      console.log('Breakpoin', result.matches, result.breakpoints)
+      debugger;
+      console.log('Breakpoin', result.matches, result.breakpoints);
       if (result.matches) {
         this.activateWebLayout();
       } else {
