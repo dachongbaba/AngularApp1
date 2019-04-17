@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AdminAppComponent } from './admin-app.component';
+import { AdminComponent } from './admin.component';
 import { HomeComponent } from './views/home.component';
 import { AboutComponent } from './views/about.component';
 import { PageComponent } from './views/page.component';
 
 const routes: Routes = [
   {
-    path: 'admin',
-    component: AdminAppComponent,
+    path: '',
+    component: AdminComponent,
     children: [
       {
         path: 'home',
@@ -34,4 +34,4 @@ const routes: Routes = [
     RouterModule
   ]
 })
-export class AdminAppRoutingModule { }
+export class AdminRoutingModule { }

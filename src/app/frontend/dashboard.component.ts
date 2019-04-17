@@ -3,10 +3,10 @@ import { MediaMatcher } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-dashboard',
-  templateUrl: './dashboard-app.component.html',
-  styleUrls: ['./dashboard-app.component.scss']
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardAppComponent implements OnDestroy {
+export class DashboardComponent implements OnDestroy {
   open = false;
   mobileQuery: MediaQueryList;
   private mobileQueryListener: () => void;

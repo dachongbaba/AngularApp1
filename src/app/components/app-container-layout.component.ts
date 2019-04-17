@@ -24,7 +24,6 @@ export class AppContainerLayoutComponent implements OnInit, OnDestroy {
       Breakpoints.Medium,
       Breakpoints.Large,
     ]).subscribe(result => {
-      debugger;
       console.log('Breakpoin', result.matches, result.breakpoints);
       if (result.matches) {
         this.activateWebLayout();

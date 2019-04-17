@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatSidenavModule,
   MatToolbarModule,
@@ -21,7 +20,6 @@ import { AppContainerLayoutComponent } from './app-container-layout.component';
   ],
   imports: [
     CommonModule,
-    BrowserAnimationsModule,
     MatSidenavModule,
     MatToolbarModule,
     MatMenuModule,
@@ -32,7 +30,13 @@ import { AppContainerLayoutComponent } from './app-container-layout.component';
   exports: [
     AppContainerComponent,
     AppContainerViewComponent,
-    AppContainerLayoutComponent
+    AppContainerLayoutComponent,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatListModule,
+    MatIconModule,
+    MatButtonModule
   ]
 })
 export class AppComponentsModule {}

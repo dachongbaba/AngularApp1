@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardAppModule } from './dashboard/dashboard-app.module';
-import { AdminAppModule } from './admin/admin-app.module';
+// import { DashboardModule } from './dashboard/dashboard.module';
+// import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -12,8 +12,7 @@ import { AdminAppModule } from './admin/admin-app.module';
   ],
   imports: [
     BrowserModule,
-    DashboardAppModule,
-    AdminAppModule,
+    BrowserAnimationsModule,
     AppRoutingModule
   ],
   providers: [],

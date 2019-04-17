@@ -3,15 +3,20 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  // {
-  //    path: 'dashboard',
-  //    loadChildren: './dashboard/dashboard.module#DashboardModule'
-  // },
+  {
+    path: 'dashboard',
+    loadChildren: './frontend/dashboard.module#DashboardModule'
+  },
+  {
+    path: 'admin',
+    loadChildren: './backend/admin.module#AdminModule'
+  },
   {
     path: '',
-    redirectTo: '/admin',
+    redirectTo: '/dashboard',
     pathMatch: 'full'
   },
+
   {
     path: '',
     component: AppComponent
