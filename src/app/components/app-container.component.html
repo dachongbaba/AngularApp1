@@ -1,12 +1,13 @@
 <ng-container>
 
   <mat-toolbar *ngIf="showAppbar" #appbar color="primary" class="flex-shrink-0">
-    <ng-content select="[appbar]"></ng-content>
+    <ng-content select="[top]"></ng-content>
   </mat-toolbar>
+  <ng-content select="[topAppbar]"></ng-content>
 
   <mat-sidenav-container class="flex-grow-1 d-flex flex-row">
-
-    <mat-sidenav #leftSideNav position="start">
+    <ng-content select="[leftSide]"></ng-content>
+    <mat-sidenav *ngIf="showLeft" #leftSide position="start">
       <ng-content select="[left]"></ng-content>
     </mat-sidenav>
 
@@ -14,9 +15,10 @@
       <ng-content></ng-content>
     </mat-sidenav-content>
 
-    <mat-sidenav #rightSideNav position="end">
+    <mat-sidenav *ngIf="showRight" #rightSide position="end">
       <ng-content select="[right]"></ng-content>
     </mat-sidenav>
+    <ng-content select="[rightSide]"></ng-content>
 
   </mat-sidenav-container>
 

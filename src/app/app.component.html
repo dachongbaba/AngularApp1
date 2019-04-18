@@ -1,9 +1,9 @@
-<app-container #appContainer showAppbar showLeftSideNav showRightSideNav>
-    <ng-container appbar>
+<app-container #appContainer showAppbar="true" showLeft="true" showRight="true">
+    <ng-container top>
         <button mat-icon-button (click)="toggleLeft()">
             <mat-icon>home</mat-icon>
         </button>
-        <h1 class="mr-auto">Dashboard</h1>
+        <h1 class="mr-auto"></h1>
         <button mat-icon-button (click)="toggleRight()">
             <mat-icon>apps</mat-icon>
         </button>

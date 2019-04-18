@@ -1,5 +1,6 @@
-import {Component, ContentChild, ViewChild, Input, OnChanges} from '@angular/core';
+import {Component, ContentChild, ViewChild, Input, Output } from '@angular/core';
 import { BreakpointObserver, Breakpoints, MediaMatcher } from '@angular/cdk/layout';
+import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { MatSidenav } from '@angular/material/sidenav';
 import { MatToolbar } from '@angular/material/toolbar';
 type Appbar = MatToolbar;
@@ -14,33 +15,26 @@ type SideNavOpen = boolean;
   host: {class: 'd-flex flex-column vh-100'}
 })
 export class AppContainerComponent {
+  @Input()
+  get showAppbar(): boolean { return this._showAppbar; }
+  set showAppbar(value: boolean) { this._showAppbar = coerceBooleanProperty(value); }
+  private _showAppbar: boolean = false;
+
+  @Input()
+  get showLeft(): boolean { return this._showLeft; }
+  set showLeft(value: boolean) { this._showLeft = coerceBooleanProperty(value); }
+  private _showLeft: boolean = false;
+
+  @Input()
+  get showRight(): boolean { return this._showRight; }
+  set showRight(value: boolean) { this._showRight = coerceBooleanProperty(value); }
+  private _showRight: boolean = false;
 
   /* sidenav ref */
-  @ContentChild('appbar') appbar: Appbar;
-  @ViewChild('leftSideNav') leftSideNav: SideNav;
-  @ViewChild('rightSideNav') rightSideNav: SideNav;
+  @ContentChild('topAppBar') topAppBar: Appbar;
+  @ViewChild('leftSide') leftSide: SideNav;
+  @ViewChild('rightSide') rightSide: SideNav;
 
-  private _showAppbar = true;
-  private _showLeftSideNav = true;
-  private _showRightSideNav = true;
-
-  @Input()
-  set showAppbar(val: string) {
-    this._showAppbar = val === 'false' ? false : true;
-  }
-  get showAppbar(): boolean { return this._showAppbar; }
-
-  @Input()
-  set showLeftSideNav(val: string) {
-    this._showLeftSideNav = val === 'false' ? false : true;
-  }
-  get showLeftSideNav(): string { return this._showLeftSideNav; }
-
-  @Input()
-  set showRightSideNav(val: boolean) {
-    this._showRightSideNav = val === 'false' ? false : true;
-  }
-  get showRightSideNav(): boolean { return this._showRightSideNav; }
 
   constructor(breakpointObserver: BreakpointObserver) {
     breakpointObserver.observe([
@@ -57,31 +51,31 @@ export class AppContainerComponent {
   }
 
   private activateWebLayout() {
-    this.togleSidenNav(this.leftSideNav, 'side', true);
-    this.togleSidenNav(this.rightSideNav, 'side', false);
+    this.togleSidenNav(this.leftSide, 'side', true);
+    this.togleSidenNav(this.rightSide, 'side', false);
   }
 
   private activateHandsetLayout() {
-    this.togleSidenNav(this.leftSideNav, 'over', false);
-    this.togleSidenNav(this.rightSideNav, 'over', false);
+    this.togleSidenNav(this.leftSide, 'over', false);
+    this.togleSidenNav(this.rightSide, 'over', false);
   }
 
-  private togleSidenNav(sideNav: SideNav, mode: SideNavMode, open: SideNavOpen) {
-    sideNav.mode = mode;
-    sideNav.opened = open;
+  private togleSidenNav(side: SideNav, mode: SideNavMode, open: SideNavOpen) {
+    side.mode = mode;
+    side.opened = open;
   }
 
-  private togleSidenNavEx(sideNav: SideNav) {
-    if (sideNav) {
-      sideNav.toggle();
+  private togleSidenNavEx(side: SideNav) {
+    if (side) {
+      side.toggle();
     }
   }
   toggleLeft() {
-    this.togleSidenNavEx(this.leftSideNav);
+    this.togleSidenNavEx(this.leftSide);
   }
 
   toggleRight() {
-    this.togleSidenNavEx(this.rightSideNav);
+    this.togleSidenNavEx(this.rightSide);
   }
 
 }

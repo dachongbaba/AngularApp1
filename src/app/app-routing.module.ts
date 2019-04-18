@@ -12,9 +12,9 @@ const routes: Routes = [
     loadChildren: './backend/admin.module#AdminModule'
   },
   {
-    path: '',
-    redirectTo: '/dashboard',
-    pathMatch: 'full'
+     path: '',
+     redirectTo: '/dashboard',
+     pathMatch: 'full'
   },
 
   {
