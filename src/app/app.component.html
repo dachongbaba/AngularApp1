@@ -1,4 +1,4 @@
-<app-container #appContainer>
+<app-container #appContainer showAppbar showLeftSideNav showRightSideNav>
     <ng-container appbar>
         <button mat-icon-button (click)="toggleLeft()">
             <mat-icon>home</mat-icon>
@@ -9,12 +9,12 @@
         </button>
     </ng-container>
 
-    <mat-nav-list leftSideNav style="width:200px">
+    <mat-nav-list left style="width:200px">
         <a mat-list-item routerLink="Dashboard">Dashboard</a>
         <a mat-list-item routerLink="Admin">Admin</a>
     </mat-nav-list>
 
-    <mat-nav-list rightSideNav style="width:200px">
+    <mat-nav-list right style="width:200px">
         <a mat-list-item routerLink="Dashboard">Dashboard</a>
         <a mat-list-item routerLink="Admin">Admin</a>
     </mat-nav-list>
