@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AppComponentsModule } from '../components/app.components.module';
+import { ComponentsModule } from '../components/components.module';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { HomeComponent } from './views/home.component';
@@ -17,7 +17,7 @@ import { PageComponent } from './views/page.component';
   ],
   imports: [
     CommonModule,
-    AppComponentsModule,
+    ComponentsModule,
     DashboardRoutingModule,
   ]
 })

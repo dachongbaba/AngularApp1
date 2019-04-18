@@ -5,19 +5,23 @@
   </mat-toolbar>
 
   <mat-sidenav-container class="flex-grow-1 d-flex flex-row">
-
-    <mat-sidenav #sideNavLeft position="start">
+    <div #leftContainer class="flex-shrink-0">
       <ng-content select="[left]"></ng-content>
-    </mat-sidenav>
-
-    <mat-sidenav #sideNavRight position="end">
-      <ng-content select="[right]"></ng-content>
+    </div>
+    <mat-sidenav *ngIf="showLeftSideNav" #leftSideNav position="start">
+      <ng-content select="[leftSideNav]"></ng-content>
     </mat-sidenav>
 
     <mat-sidenav-content class="flex-grow-1">
       <ng-content></ng-content>
     </mat-sidenav-content>
 
+    <div #rightContainer class="flex-shrink-0">
+      <ng-content select="[right]"></ng-content>
+    </div>
+    <mat-sidenav *ngIf="showRightSideNav" #rightSideNav position="end">
+      <ng-content select="[rightSideNav]"></ng-content>
+    </mat-sidenav>
   </mat-sidenav-container>
 
 </ng-container>

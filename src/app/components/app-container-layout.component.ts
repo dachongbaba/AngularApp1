@@ -14,7 +14,7 @@ type DrawerOpen = boolean;
   styleUrls: ['./app-container-layout.component.scss'],
   host: {class: 'd-flex flex-column h-100'}
 })
-export class AppContainerLayoutComponent implements OnInit, OnDestroy {
+export class AppContainerLayoutComponent {
   @ViewChild('toolbar') toolbar: Toolbar;
   @ViewChild('drawerLeft') drawerLeft: Drawer;
   @ViewChild('drawerRight') drawerRight: Drawer;

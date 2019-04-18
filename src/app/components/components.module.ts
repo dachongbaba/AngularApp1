@@ -39,4 +39,4 @@ import { AppContainerLayoutComponent } from './app-container-layout.component';
     MatButtonModule
   ]
 })
-export class AppComponentsModule {}
+export class ComponentsModule {}

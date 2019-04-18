@@ -1,2 +1,23 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<router-outlet></router-outlet>
+<app-container #appContainer>
+    <ng-container appbar>
+        <button mat-icon-button (click)="toggleLeft()">
+            <mat-icon>home</mat-icon>
+        </button>
+        <h1 class="mr-auto">Dashboard</h1>
+        <button mat-icon-button (click)="toggleRight()">
+            <mat-icon>apps</mat-icon>
+        </button>
+    </ng-container>
+
+    <mat-nav-list leftSideNav style="width:200px">
+        <a mat-list-item routerLink="Dashboard">Dashboard</a>
+        <a mat-list-item routerLink="Admin">Admin</a>
+    </mat-nav-list>
+
+    <mat-nav-list rightSideNav style="width:200px">
+        <a mat-list-item routerLink="Dashboard">Dashboard</a>
+        <a mat-list-item routerLink="Admin">Admin</a>
+    </mat-nav-list>
+
+    <router-outlet></router-outlet>
+</app-container>
