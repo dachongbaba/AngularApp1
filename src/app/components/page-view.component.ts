@@ -1,6 +1,7 @@
 import {Component, HostBinding, ViewChild } from '@angular/core';
-import {MatDrawer, MatSidenav} from '@angular/material/sidenav';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import {MatDrawer} from '@angular/material';
+
 
 @Component({
   selector: 'app-page-view',

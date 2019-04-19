@@ -1,5 +1,4 @@
-import {Component, HostBinding, ViewChild} from '@angular/core';
-import { AppContainerComponent } from './components/app-container.component';
+import { Component, HostBinding, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { MatToolbar } from '@angular/material/toolbar';
 
