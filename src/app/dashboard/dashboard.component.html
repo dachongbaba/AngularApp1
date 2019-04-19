@@ -2,9 +2,18 @@
 
   <ng-container toolbar>
     <button mat-icon-button (click)="appPageLayout.toggleLeft()">
-      <mat-icon>menu</mat-icon>
+      <mat-icon>apps</mat-icon>
     </button>
     <h1 class="mr-auto">Dashboard</h1>
+    <button mat-icon-button (click)="appPageLayout.toggleRight()">
+      <mat-icon>file_download</mat-icon>
+    </button>
+    <button mat-icon-button (click)="appPageLayout.toggleRight()">
+      <mat-icon>print</mat-icon>
+    </button>
+    <button mat-icon-button (click)="appPageLayout.toggleRight()">
+      <mat-icon>bookmark</mat-icon>
+    </button>
     <button mat-icon-button (click)="appPageLayout.toggleRight()">
       <mat-icon>more_horiz</mat-icon>
     </button>

@@ -3,7 +3,8 @@
 </mat-toolbar>
 
 <mat-sidenav-container class="flex-grow-1 d-flex flex-row">
-  <mat-sidenav #leftSide opened mode='side' position="start">
+
+  <mat-sidenav #leftSide position="start">
     <ng-content select=[leftSide]></ng-content>
   </mat-sidenav>
 
@@ -11,7 +12,8 @@
     <ng-content></ng-content>
   </mat-sidenav-content>
 
-  <mat-sidenav #rightSide mode='side' position="end">
+  <mat-sidenav #rightSide position="end">
     <ng-content select=[rightSide]></ng-content>
   </mat-sidenav>
+
 </mat-sidenav-container>
