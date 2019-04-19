@@ -1,26 +1,25 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
+import { HomeComponent } from './pages/home.component';
 
 const routes: Routes = [
   {
     path: 'dashboard',
-    loadChildren: './frontend/dashboard.module#DashboardModule'
+    loadChildren: './dashboard/dashboard.module#DashboardModule'
   },
   {
     path: 'admin',
-    loadChildren: './backend/admin.module#AdminModule'
+    loadChildren: './admin/admin.module#AdminModule'
   },
-  {
-     path: '',
-     redirectTo: '/dashboard',
-     pathMatch: 'full'
-  },
-
   {
     path: '',
-    component: AppComponent
-  }
+    component: HomeComponent
+  },
+  // {
+  //   path: '',
+  //   redirectTo: '/dashboard',
+  //   pathMatch: 'full'
+  // },
 ];
 
 @NgModule({

@@ -1,23 +1,4 @@
-<app-container #appContainer showAppbar="true" showLeft="true" showRight="true">
-    <ng-container top>
-        <button mat-icon-button (click)="toggleLeft()">
-            <mat-icon>home</mat-icon>
-        </button>
-        <h1 class="mr-auto"></h1>
-        <button mat-icon-button (click)="toggleRight()">
-            <mat-icon>apps</mat-icon>
-        </button>
-    </ng-container>
+<router-outlet></router-outlet>
 
-    <mat-nav-list left style="width:200px">
-        <a mat-list-item routerLink="Dashboard">Dashboard</a>
-        <a mat-list-item routerLink="Admin">Admin</a>
-    </mat-nav-list>
 
-    <mat-nav-list right style="width:200px">
-        <a mat-list-item routerLink="Dashboard">Dashboard</a>
-        <a mat-list-item routerLink="Admin">Admin</a>
-    </mat-nav-list>
 
-    <router-outlet></router-outlet>
-</app-container>

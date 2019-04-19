@@ -26,3 +26,30 @@ $container-max-widths: (
 
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+
+.scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #F5F5F5;
+}
+
+.scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 0px;
+  background-color: #FFF;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #AAA;
+}
+
+.scroll-x {
+  overflow-x: auto;
+}
+
+.scroll-y {
+  overflow-y: auto;
+}

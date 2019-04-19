@@ -4,12 +4,18 @@ import { DashboardComponent } from './dashboard.component';
 import { HomeComponent } from './views/home.component';
 import { AboutComponent } from './views/about.component';
 import { PageComponent } from './views/page.component';
+import { MasterDetailComponent } from './views/master-detail.component';
+
 
 const routes: Routes = [
   {
     path: '',
     component: DashboardComponent,
     children: [
+      {
+        path: 'master-detail',
+        component: MasterDetailComponent,
+      },
       {
         path: 'home',
         component: HomeComponent,
@@ -19,7 +25,7 @@ const routes: Routes = [
         component: AboutComponent,
       },
       {
-        path: '',
+        path: 'page',
         component: PageComponent,
       }
     ]

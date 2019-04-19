@@ -1,0 +1,32 @@
+<app-page-view>
+  <mat-toolbar toolbar class="flex-shrink-0">
+    <h2>Page</h2>
+  </mat-toolbar>
+
+  <mat-drawer left #drawerLeft position="start">
+    <mat-nav-list style="width:300px">
+      <a mat-list-item routerLink="home">home</a>
+      <a mat-list-item routerLink="about">about</a>
+      <a mat-list-item routerLink="page">page</a>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <mat-drawer right #drawerRight position="end" mode="side">
+    <mat-nav-list style="width:300px">
+      <a mat-list-item routerLink="home">home</a>
+      <a mat-list-item routerLink="about">about</a>
+      <a mat-list-item routerLink="page">page</a>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <div class="jumbotron rounded-0">
+    <div class="container">
+      <h1 class="display-4">Hello, world!</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography band spacing to space content out within the larger container.</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+  </div>
+
+</app-page-view>
