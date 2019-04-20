@@ -1,7 +1,7 @@
-import {Component, HostBinding, ViewChild} from '@angular/core';
+import {Component, HostBinding, ViewChild } from '@angular/core';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
-import {MatSidenav} from '@angular/material/sidenav';
-import {MatToolbar} from '@angular/material/toolbar';
+import { MatSidenav } from '@angular/material/sidenav';
+import { MatToolbar } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-page-layout',
@@ -9,7 +9,7 @@ import {MatToolbar} from '@angular/material/toolbar';
 })
 export class PageLayoutComponent {
   @HostBinding('class') class = 'd-flex flex-column vh-100';
-  @ViewChild('toolbar') topAppbar: MatToolbar;
+  @ViewChild('toolbar') toolbar: MatToolbar;
   @ViewChild('leftSide') leftSide: MatSidenav;
   @ViewChild('rightSide') rightSide: MatSidenav;
 
@@ -25,7 +25,6 @@ export class PageLayoutComponent {
         this.activateSmallLayout();
       }
     });
-
   }
 
   private activateWebLayout() {
@@ -38,7 +37,7 @@ export class PageLayoutComponent {
     this.togleSide(this.rightSide, 'over', false);
   }
 
-  private togleSide(side: MatSidenav, mode: 'side' | 'over', open: boolean) {
+  private togleSide(side: MatSidenav, mode: 'side'|'over', open: boolean) {
     side.mode = mode;
     side.opened = open;
   }
