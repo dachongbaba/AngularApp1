@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import { Component, HostBinding, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { MatToolbar } from '@angular/material/toolbar';
+=======
+import {Component, HostBinding, ViewChild} from '@angular/core';
+import {MatSidenav} from '@angular/material/sidenav';
+import {MatToolbar} from '@angular/material/toolbar';
+>>>>>>> 6d7083b4252ca22ca6bc45ad23964a3e9f8e93da
 
 @Component({
   selector: 'app-root',

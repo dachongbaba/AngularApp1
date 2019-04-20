@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { DashboardComponent } from './dashboard.component';
-import { HomeComponent } from './views/home.component';
-import { AboutComponent } from './views/about.component';
-import { PageComponent } from './views/page.component';
-import { MasterDetailComponent } from './views/master-detail.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {DashboardComponent} from './dashboard.component';
+import {HomeComponent} from './views/home.component';
+import {AboutComponent} from './views/about.component';
+import {PageComponent} from './views/page.component';
+import {MasterDetailComponent} from './views/master-detail.component';
 
 
 const routes: Routes = [
@@ -45,4 +45,5 @@ const routes: Routes = [
     RouterModule
   ]
 })
-export class DashboardRoutingModule { }
+export class DashboardRoutingModule {
+}

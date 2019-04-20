@@ -9,7 +9,7 @@ import { MatToolbar } from '@angular/material/toolbar';
 })
 export class PageLayoutComponent {
   @HostBinding('class') class = 'd-flex flex-column vh-100';
-  @ViewChild('toolbar') topAppbar: MatToolbar;
+  @ViewChild('toolbar') toolbar: MatToolbar;
   @ViewChild('leftSide') leftSide: MatSidenav;
   @ViewChild('rightSide') rightSide: MatSidenav;
 
@@ -26,7 +26,6 @@ export class PageLayoutComponent {
         this.noActivateLayout();
       }
     });
-
   }
 
   private activateLargeLayout() {

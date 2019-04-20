@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import {Component, HostBinding, ViewChild } from '@angular/core';
+=======
+import {Component, HostBinding, ViewChild} from '@angular/core';
+import {MatDrawer} from '@angular/material/sidenav';
+>>>>>>> 6d7083b4252ca22ca6bc45ad23964a3e9f8e93da
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {MatDrawer} from '@angular/material';
 
@@ -17,16 +22,16 @@ export class PageViewComponent {
       Breakpoints.Large
     ]).subscribe(result => {
       if (result.matches) {
-        console.log('pave-view big Layout', result.breakpoints);
-        this.activateBigLayout();
+        console.log('pave-view Large Layout', result.breakpoints);
+        this.activateLargeLayout();
       }
     });
     breakpointObserver.observe([
       Breakpoints.Medium
     ]).subscribe(result => {
       if (result.matches) {
-        console.log('pave-view activate standard Layout', result.breakpoints);
-        this.activateWebLayout();
+        console.log('pave-view activate Medium Layout', result.breakpoints);
+        this.activateMediumLayout();
       }
     });
     breakpointObserver.observe([
@@ -34,18 +39,18 @@ export class PageViewComponent {
       Breakpoints.XSmall
     ]).subscribe(result => {
       if (result.matches) {
-        console.log('pave-view activate small Layout', result.breakpoints);
+        console.log('pave-view activate Small Layout', result.breakpoints);
         this.activateSmallLayout();
       }
     });
   }
 
-  private activateBigLayout() {
+  private activateLargeLayout() {
     this.togleSide(this.leftDrawer, 'side', true);
     this.togleSide(this.rightDrawer, 'side', true);
   }
 
-  private activateWebLayout() {
+  private activateMediumLayout() {
     this.togleSide(this.leftDrawer, 'side', true);
     this.togleSide(this.rightDrawer, 'side', false);
   }
@@ -55,7 +60,7 @@ export class PageViewComponent {
     this.togleSide(this.rightDrawer, 'over', false);
   }
 
-  private togleSide(drawer: MatDrawer, mode: 'side'|'over', open: boolean) {
+  private togleSide(drawer: MatDrawer, mode: 'side' | 'over', open: boolean) {
     drawer.mode = mode;
     drawer.opened = open;
   }

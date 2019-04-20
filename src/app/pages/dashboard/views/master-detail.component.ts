@@ -1,5 +1,5 @@
-import {Component, HostBinding, ViewChild, OnInit} from '@angular/core';
-import {MatTable, MatTableDataSource, MatPaginator} from '@angular/material';
+import {Component, HostBinding, OnInit, ViewChild} from '@angular/core';
+import {MatPaginator, MatTableDataSource} from '@angular/material';
 
 export interface User {
   name: string;
