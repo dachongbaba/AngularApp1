@@ -28,16 +28,6 @@ export class PageLayoutComponent {
     });
   }
 
-  private activateLargeLayout() {
-    this.togleSide(this.leftSide, 'side', true);
-    this.togleSide(this.rightSide, 'side', false);
-  }
-
-  private noActivateLayout() {
-    this.togleSide(this.leftSide, 'over', false);
-    this.togleSide(this.rightSide, 'over', false);
-  }
-
   togleSide(side: MatSidenav, mode: 'side' | 'over', open: boolean) {
     side.mode = mode;
     side.opened = open;
@@ -50,5 +40,15 @@ export class PageLayoutComponent {
 
   toggleRight() {
     this.rightSide.toggle();
+  }
+
+  private activateLargeLayout() {
+    this.togleSide(this.leftSide, 'side', true);
+    this.togleSide(this.rightSide, 'side', false);
+  }
+
+  private noActivateLayout() {
+    this.togleSide(this.leftSide, 'over', false);
+    this.togleSide(this.rightSide, 'over', false);
   }
 }

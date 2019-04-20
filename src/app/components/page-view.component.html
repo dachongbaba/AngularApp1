@@ -1,8 +1,8 @@
 <ng-content select="[toolbar]"></ng-content>
 
-<mat-drawer-container class="flex-grow-1 d-flex flex-row" autosize>
+<mat-drawer-container autosize class="flex-grow-1 d-flex flex-row">
 
-  <mat-drawer #leftDrawer position="start" class="col-60 col-sm-30 col-md-20 col-lg-10 scroll scroll-y h-100">
+  <mat-drawer #leftDrawer class="col-60 col-sm-30 col-md-20 col-lg-10 scroll scroll-y h-100" position="start">
     <ng-content select=[left]></ng-content>
   </mat-drawer>
 
@@ -10,7 +10,7 @@
     <ng-content select=[center]></ng-content>
   </mat-drawer-content>
 
-  <mat-drawer #rightDrawer position="end" class="col-60 col-sm-30 col-md-20 col-lg-15">
+  <mat-drawer #rightDrawer class="col-60 col-sm-30 col-md-20 col-lg-15" position="end">
     <ng-content select=[right]></ng-content>
   </mat-drawer>
 </mat-drawer-container>

@@ -1,45 +1,44 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 
 import {
-  MatSidenavModule,
-  MatToolbarModule,
-  MatMenuModule,
-  MatListModule,
-  MatIconModule,
-  MatButtonModule,
-  MatBadgeModule,
-  MatChipsModule,
-  MatRippleModule,
-  MatTableModule,
-  MatPaginatorModule,
-  MatCardModule,
-  MatTabsModule,
-  MatTreeModule,
-  MatStepperModule,
-  MatGridListModule,
-  MatExpansionModule,
   MatAutocompleteModule,
+  MatBadgeModule,
+  MatBottomSheetModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
   MatCheckboxModule,
+  MatChipsModule,
   MatDatepickerModule,
+  MatDialogModule,
+  MatExpansionModule,
   MatFormFieldModule,
+  MatGridListModule,
+  MatIconModule,
   MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
   MatRadioModule,
+  MatRippleModule,
   MatSelectModule,
+  MatSidenavModule,
   MatSliderModule,
   MatSlideToggleModule,
-  MatProgressSpinnerModule,
-  MatProgressBarModule,
-  MatBottomSheetModule,
-  MatDialogModule,
   MatSnackBarModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
   MatTooltipModule,
-  MatButtonToggleModule
+  MatTreeModule
 } from '@angular/material';
 
 
 @NgModule({
-  declarations: [
-  ],
+  declarations: [],
   imports: [
     MatSidenavModule,
     MatToolbarModule,
@@ -111,4 +110,5 @@ import {
     MatButtonToggleModule
   ]
 })
-export class MaterialModule {}
+export class MaterialModule {
+}

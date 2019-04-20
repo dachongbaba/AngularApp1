@@ -9,6 +9,10 @@ import {MatDrawer} from '@angular/material';
 })
 export class PageViewComponent {
 
+  @HostBinding('class') class = 'flex-grow-1 d-flex flex-column';
+  @ViewChild('leftDrawer') leftDrawer: MatDrawer;
+  @ViewChild('rightDrawer') rightDrawer: MatDrawer;
+
   constructor(breakpointObserver: BreakpointObserver) {
     breakpointObserver.observe([
       Breakpoints.Large
@@ -37,14 +41,18 @@ export class PageViewComponent {
     });
   }
 
-  @HostBinding('class') class = 'flex-grow-1 d-flex flex-column';
-  @ViewChild('leftDrawer') leftDrawer: MatDrawer;
-  @ViewChild('rightDrawer') rightDrawer: MatDrawer;
-
   togleSide(drawer: MatDrawer, mode: 'side' | 'over', open: boolean) {
     drawer.mode = mode;
     drawer.opened = open;
     return this;
+  }
+
+  toggleLeft() {
+    this.leftDrawer.toggle();
+  }
+
+  toggleRight() {
+    this.rightDrawer.toggle();
   }
 
   private activateLargeLayout() {
@@ -63,13 +71,5 @@ export class PageViewComponent {
     this
       .togleSide(this.leftDrawer, 'over', false)
       .togleSide(this.rightDrawer, 'over', false);
-  }
-
-  toggleLeft() {
-    this.leftDrawer.toggle();
-  }
-
-  toggleRight() {
-    this.rightDrawer.toggle();
   }
 }

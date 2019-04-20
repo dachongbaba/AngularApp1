@@ -1,9 +1,9 @@
 <app-page-view>
-  <mat-toolbar toolbar class="flex-shrink-0">
+  <mat-toolbar class="flex-shrink-0" toolbar>
     <h2>Page</h2>
   </mat-toolbar>
 
-  <mat-drawer left #drawerLeft position="start">
+  <mat-drawer #drawerLeft left position="start">
     <mat-nav-list style="width:300px">
       <a mat-list-item routerLink="home">home</a>
       <a mat-list-item routerLink="about">about</a>
@@ -11,7 +11,7 @@
     </mat-nav-list>
   </mat-drawer>
 
-  <mat-drawer right #drawerRight position="end" mode="side">
+  <mat-drawer #drawerRight mode="side" position="end" right>
     <mat-nav-list style="width:300px">
       <a mat-list-item routerLink="home">home</a>
       <a mat-list-item routerLink="about">about</a>

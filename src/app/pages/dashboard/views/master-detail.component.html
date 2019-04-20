@@ -1,10 +1,10 @@
 <app-page-view #pageView>
-  <mat-toolbar toolbar class="flex-shrink-0">
-    <button mat-icon-button (click)="pageView.toggleLeft()">
+  <mat-toolbar class="flex-shrink-0" toolbar>
+    <button (click)="pageView.toggleLeft()" mat-icon-button>
       <mat-icon>menu</mat-icon>
     </button>
     <h1 class="mr-auto">Master Detail View</h1>
-    <button mat-icon-button (click)="pageView.toggleRight()">
+    <button (click)="pageView.toggleRight()" mat-icon-button>
       <mat-icon>more_horiz</mat-icon>
     </button>
   </mat-toolbar>
@@ -46,34 +46,34 @@
   </ng-container>
 
   <div center class="scroll scroll-y h-100">
-    <table mat-table [dataSource]="dataSource" class="w-100">
+    <table [dataSource]="dataSource" class="w-100" mat-table>
 
       <!-- Position Column -->
       <ng-container matColumnDef="position">
-        <th mat-header-cell *matHeaderCellDef> No.</th>
-        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        <th *matHeaderCellDef mat-header-cell> No.</th>
+        <td *matCellDef="let element" mat-cell> {{element.position}} </td>
       </ng-container>
 
       <!-- Name Column -->
       <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef> Name</th>
-        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        <th *matHeaderCellDef mat-header-cell> Name</th>
+        <td *matCellDef="let element" mat-cell> {{element.name}} </td>
       </ng-container>
 
       <!-- Weight Column -->
       <ng-container matColumnDef="weight">
-        <th mat-header-cell *matHeaderCellDef> Weight</th>
-        <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+        <th *matHeaderCellDef mat-header-cell> Weight</th>
+        <td *matCellDef="let element" mat-cell> {{element.weight}} </td>
       </ng-container>
 
       <!-- Symbol Column -->
       <ng-container matColumnDef="symbol">
-        <th mat-header-cell *matHeaderCellDef> Symbol</th>
-        <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+        <th *matHeaderCellDef mat-header-cell> Symbol</th>
+        <td *matCellDef="let element" mat-cell> {{element.symbol}} </td>
       </ng-container>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+      <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
     </table>
 
     <mat-paginator [pageSizeOptions]="[20, 50, 100]" showFirstLastButtons></mat-paginator>
