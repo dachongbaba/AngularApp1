@@ -9,7 +9,7 @@ import {MatToolbar} from '@angular/material/toolbar';
 })
 export class AppComponent {
   @HostBinding('class') class = 'd-flex flex-column scroll vh-100';
-  @ViewChild('topAppbar') topAppbar: MatToolbar;
+  @ViewChild('topToobar') topToobar: MatToolbar;
   @ViewChild('leftSide') leftSide: MatSidenav;
   @ViewChild('rightSide') rightSide: MatSidenav;
 
