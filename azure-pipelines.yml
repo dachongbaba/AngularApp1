@@ -16,9 +16,9 @@ steps:
     command: install
 
 - task: Npm@1
-  displayName: 'npm run build'
+  displayName: 'npm run prod'
   inputs:
     command: custom
-    customCommand: 'build'
+    customCommand: 'prod'
 
 

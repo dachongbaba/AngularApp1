@@ -1,20 +1,39 @@
-<app-container>
-  <ng-container appbar>
+<app-page-layout #appPageLayout>
+
+  <ng-container toolbar>
+    <button (click)="appPageLayout.toggleLeft()" mat-icon-button>
+      <mat-icon>apps</mat-icon>
+    </button>
     <h1 class="mr-auto">Dashboard</h1>
-    <button mat-icon-button>
-      <mat-icon>apps</mat-icon>
+    <button (click)="appPageLayout.toggleRight()" mat-icon-button>
+      <mat-icon>file_download</mat-icon>
     </button>
-    <button mat-icon-button>
-      <mat-icon>apps</mat-icon>
+    <button (click)="appPageLayout.toggleRight()" mat-icon-button>
+      <mat-icon>print</mat-icon>
     </button>
-    <button mat-icon-button>
-      <mat-icon>apps</mat-icon>
+    <button (click)="appPageLayout.toggleRight()" mat-icon-button>
+      <mat-icon>bookmark</mat-icon>
+    </button>
+    <button (click)="appPageLayout.toggleRight()" mat-icon-button>
+      <mat-icon>more_horiz</mat-icon>
     </button>
   </ng-container>
-  <mat-nav-list right style="width:200px">
-    <a mat-list-item routerLink="home">home</a>
-    <a mat-list-item routerLink="about">about</a>
-    <a mat-list-item routerLink="page">page</a>
-  </mat-nav-list>
+
+  <ng-container leftSide>
+    <mat-nav-list style="width:200px;">
+      <a mat-list-item routerLink="master-detail">Master-Detail</a>
+      <a mat-list-item routerLink="home">Home</a>
+      <a mat-list-item routerLink="about">About</a>
+      <a mat-list-item routerLink="page">Page</a>
+    </mat-nav-list>
+  </ng-container>
+
+  <ng-container rightSide>
+    <mat-nav-list style="width:256px">
+      <a mat-list-item routerLink="/dashboard">Dashboard</a>
+    </mat-nav-list>
+  </ng-container>
+
   <router-outlet></router-outlet>
-</app-container>
+
+</app-page-layout>

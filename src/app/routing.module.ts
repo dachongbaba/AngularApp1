@@ -5,11 +5,11 @@ import {HomeComponent} from './home.component';
 const routes: Routes = [
   {
     path: 'dashboard',
-    loadChildren: './pages/dashboard/dashboard.module#DashboardModule'
+    loadChildren: './pages/dashboard/module#DashboardModule'
   },
   {
     path: 'admin',
-    loadChildren: './pages/admin/admin.module#AdminModule'
+    loadChildren: './pages/admin/module#AdminModule'
   },
   {
     path: '',
