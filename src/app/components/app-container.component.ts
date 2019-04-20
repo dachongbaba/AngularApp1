@@ -1,8 +1,9 @@
-import {Component, ContentChild, ViewChild, Input, Output } from '@angular/core';
-import { BreakpointObserver, Breakpoints, MediaMatcher } from '@angular/cdk/layout';
-import { coerceBooleanProperty } from '@angular/cdk/coercion';
-import { MatSidenav } from '@angular/material/sidenav';
-import { MatToolbar } from '@angular/material/toolbar';
+import {Component, ContentChild, Input, ViewChild} from '@angular/core';
+import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import {coerceBooleanProperty} from '@angular/cdk/coercion';
+import {MatSidenav} from '@angular/material/sidenav';
+import {MatToolbar} from '@angular/material/toolbar';
+
 type Appbar = MatToolbar;
 type SideNav = MatSidenav;
 type SideNavMode = 'over' | 'push' | 'side';
@@ -15,33 +16,69 @@ type SideNavOpen = boolean;
 })
 export class AppContainerComponent {
   @Input()
-  get showTop(): boolean { return this._showTop; }
-  set showTop(value: boolean) { this._showTop = coerceBooleanProperty(value); }
+  get showTop(): boolean {
+    return this._showTop;
+  }
+
+  set showTop(value: boolean) {
+    this._showTop = coerceBooleanProperty(value);
+  }
+
   private _showTop: boolean = false;
 
   @Input()
-  get showContainer(): boolean { return this._showContainer; }
-  set showContainer(value: boolean) { this._showContainer = coerceBooleanProperty(value); }
+  get showContainer(): boolean {
+    return this._showContainer;
+  }
+
+  set showContainer(value: boolean) {
+    this._showContainer = coerceBooleanProperty(value);
+  }
+
   private _showContainer: boolean = false;
 
   @Input()
-  get showLeft(): boolean { return this._showLeft; }
-  set showLeft(value: boolean) { this._showLeft = coerceBooleanProperty(value); }
+  get showLeft(): boolean {
+    return this._showLeft;
+  }
+
+  set showLeft(value: boolean) {
+    this._showLeft = coerceBooleanProperty(value);
+  }
+
   private _showLeft: boolean = false;
 
   @Input()
-  get showCenter(): boolean { return this._showCenter; }
-  set showCenter(value: boolean) { this._showCenter = coerceBooleanProperty(value); }
+  get showCenter(): boolean {
+    return this._showCenter;
+  }
+
+  set showCenter(value: boolean) {
+    this._showCenter = coerceBooleanProperty(value);
+  }
+
   private _showCenter: boolean = false;
 
   @Input()
-  get showRight(): boolean { return this._showRight; }
-  set showRight(value: boolean) { this._showRight = coerceBooleanProperty(value); }
+  get showRight(): boolean {
+    return this._showRight;
+  }
+
+  set showRight(value: boolean) {
+    this._showRight = coerceBooleanProperty(value);
+  }
+
   private _showRight: boolean = false;
 
   @Input()
-  get showBottom(): boolean { return this._showBottom; }
-  set showBottom(value: boolean) { this._showBottom = coerceBooleanProperty(value); }
+  get showBottom(): boolean {
+    return this._showBottom;
+  }
+
+  set showBottom(value: boolean) {
+    this._showBottom = coerceBooleanProperty(value);
+  }
+
   private _showBottom: boolean = false;
 
   /* sidenav ref */
@@ -83,6 +120,7 @@ export class AppContainerComponent {
       side.toggle();
     }
   }
+
   toggleLeft() {
     this.togleSidenNavEx(this.leftSide);
   }

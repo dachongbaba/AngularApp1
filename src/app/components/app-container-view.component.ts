@@ -1,7 +1,6 @@
-import { ChangeDetectorRef, Component, OnInit, OnDestroy } from '@angular/core';
-import { BreakpointObserver, Breakpoints, MediaMatcher } from '@angular/cdk/layout';
-import { ViewChild, ElementRef, TemplateRef, ViewContainerRef } from '@angular/core';
-import { MatToolbar, MatDrawer } from '@angular/material';
+import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import {MatDrawer, MatToolbar} from '@angular/material';
 
 type Toolbar = MatToolbar;
 type Drawer = MatDrawer;
@@ -24,7 +23,7 @@ export class AppContainerViewComponent implements OnInit, OnDestroy {
       Breakpoints.Medium,
       Breakpoints.Large,
     ]).subscribe(result => {
-      console.log('Breakpoin', result.matches, result.breakpoints)
+      console.log('Breakpoin', result.matches, result.breakpoints);
       if (result.matches) {
         this.activateWebLayout();
       } else {

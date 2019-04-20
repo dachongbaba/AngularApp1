@@ -1,5 +1,5 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
-import { AppContainerComponent } from '../components/app-container.component';
+import {Component, ViewChild} from '@angular/core';
+import {AppContainerComponent} from '../components/app-container.component';
 
 @Component({
   selector: 'app-dashboard',

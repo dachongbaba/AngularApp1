@@ -1,50 +1,49 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {RouterModule} from '@angular/router';
 
 import {
-  MatSidenavModule,
-  MatToolbarModule,
-  MatMenuModule,
-  MatListModule,
-  MatIconModule,
-  MatButtonModule,
-  MatBadgeModule,
-  MatChipsModule,
-  MatRippleModule,
-  MatTableModule,
-  MatPaginatorModule,
-  MatCardModule,
-  MatTabsModule,
-  MatTreeModule,
-  MatStepperModule,
-  MatGridListModule,
-  MatExpansionModule,
   MatAutocompleteModule,
+  MatBadgeModule,
+  MatBottomSheetModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
   MatCheckboxModule,
+  MatChipsModule,
   MatDatepickerModule,
+  MatDialogModule,
+  MatExpansionModule,
   MatFormFieldModule,
+  MatGridListModule,
+  MatIconModule,
   MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
   MatRadioModule,
+  MatRippleModule,
   MatSelectModule,
+  MatSidenavModule,
   MatSliderModule,
   MatSlideToggleModule,
-  MatProgressSpinnerModule,
-  MatProgressBarModule,
-  MatBottomSheetModule,
-  MatDialogModule,
   MatSnackBarModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
   MatTooltipModule,
-  MatButtonToggleModule
-
+  MatTreeModule
 } from '@angular/material';
 
-import { AppContainerComponent } from './app-container.component';
-import { AppContainerViewComponent } from './app-container-view.component';
-import { AppContainerLayoutComponent } from './app-container-layout.component';
-import { NavSideComponent} from './nav-side.component';
-import { PageViewComponent} from './page-view.component';
-import { PageLayoutComponent } from './page-layout.component';
+import {AppContainerComponent} from './app-container.component';
+import {AppContainerViewComponent} from './app-container-view.component';
+import {AppContainerLayoutComponent} from './app-container-layout.component';
+import {NavSideComponent} from './nav-side.component';
+import {PageViewComponent} from './page-view.component';
+import {PageLayoutComponent} from './page-layout.component';
 
 @NgModule({
   declarations: [
@@ -134,4 +133,5 @@ import { PageLayoutComponent } from './page-layout.component';
     MatButtonToggleModule
   ]
 })
-export class ComponentsModule {}
+export class ComponentsModule {
+}
