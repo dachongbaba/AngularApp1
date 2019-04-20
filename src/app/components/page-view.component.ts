@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import {Component, HostBinding, ViewChild } from '@angular/core';
-=======
 import {Component, HostBinding, ViewChild} from '@angular/core';
-import {MatDrawer} from '@angular/material/sidenav';
->>>>>>> 6d7083b4252ca22ca6bc45ad23964a3e9f8e93da
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {MatDrawer} from '@angular/material';
 
@@ -13,9 +8,6 @@ import {MatDrawer} from '@angular/material';
   templateUrl: './page-view.component.html'
 })
 export class PageViewComponent {
-  @HostBinding('class') class = 'flex-grow-1 d-flex flex-column';
-  @ViewChild('leftDrawer') leftDrawer: MatDrawer;
-  @ViewChild('rightDrawer') rightDrawer: MatDrawer;
 
   constructor(breakpointObserver: BreakpointObserver) {
     breakpointObserver.observe([
@@ -45,24 +37,32 @@ export class PageViewComponent {
     });
   }
 
+  @HostBinding('class') class = 'flex-grow-1 d-flex flex-column';
+  @ViewChild('leftDrawer') leftDrawer: MatDrawer;
+  @ViewChild('rightDrawer') rightDrawer: MatDrawer;
+
+  togleSide(drawer: MatDrawer, mode: 'side' | 'over', open: boolean) {
+    drawer.mode = mode;
+    drawer.opened = open;
+    return this;
+  }
+
   private activateLargeLayout() {
-    this.togleSide(this.leftDrawer, 'side', true);
-    this.togleSide(this.rightDrawer, 'side', true);
+    this
+      .togleSide(this.leftDrawer, 'side', true)
+      .togleSide(this.rightDrawer, 'side', true);
   }
 
   private activateMediumLayout() {
-    this.togleSide(this.leftDrawer, 'side', true);
-    this.togleSide(this.rightDrawer, 'side', false);
+    this
+      .togleSide(this.leftDrawer, 'side', true)
+      .togleSide(this.rightDrawer, 'side', false);
   }
 
   private activateSmallLayout() {
-    this.togleSide(this.leftDrawer, 'over', false);
-    this.togleSide(this.rightDrawer, 'over', false);
-  }
-
-  private togleSide(drawer: MatDrawer, mode: 'side' | 'over', open: boolean) {
-    drawer.mode = mode;
-    drawer.opened = open;
+    this
+      .togleSide(this.leftDrawer, 'over', false)
+      .togleSide(this.rightDrawer, 'over', false);
   }
 
   toggleLeft() {

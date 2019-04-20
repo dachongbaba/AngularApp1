@@ -1,7 +1,7 @@
-import {Component, HostBinding, ViewChild } from '@angular/core';
+import {Component, HostBinding, ViewChild} from '@angular/core';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
-import { MatSidenav } from '@angular/material/sidenav';
-import { MatToolbar } from '@angular/material/toolbar';
+import {MatSidenav} from '@angular/material/sidenav';
+import {MatToolbar} from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-page-layout',
@@ -38,9 +38,10 @@ export class PageLayoutComponent {
     this.togleSide(this.rightSide, 'over', false);
   }
 
-  private togleSide(side: MatSidenav, mode: 'side'|'over', open: boolean) {
+  togleSide(side: MatSidenav, mode: 'side' | 'over', open: boolean) {
     side.mode = mode;
     side.opened = open;
+    return this;
   }
 
   toggleLeft() {
