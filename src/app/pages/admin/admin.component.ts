@@ -1,5 +1,5 @@
 import { Component, ChangeDetectorRef, OnDestroy } from '@angular/core';
-import { MediaMatcher } from '_@angular_cdk@7.3.7@@angular/cdk/layout';
+import { MediaMatcher } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-dashboard',

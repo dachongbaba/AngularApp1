@@ -15,25 +15,26 @@ export class PageLayoutComponent {
 
   constructor(breakpointObserver: BreakpointObserver) {
     breakpointObserver.observe([
-      Breakpoints.XLarge
+      Breakpoints.XLarge,
+      Breakpoints.Large
     ]).subscribe(result => {
       if (result.matches) {
         console.log('page-layout activate web Layout', result.breakpoints);
-        this.activateWebLayout();
+        this.activateLargeLayout();
       } else {
         console.log('page-layout activate small Layout', result.breakpoints);
-        this.activateSmallLayout();
+        this.noActivateLayout();
       }
     });
 
   }
 
-  private activateWebLayout() {
+  private activateLargeLayout() {
     this.togleSide(this.leftSide, 'side', true);
     this.togleSide(this.rightSide, 'side', false);
   }
 
-  private activateSmallLayout() {
+  private noActivateLayout() {
     this.togleSide(this.leftSide, 'over', false);
     this.togleSide(this.rightSide, 'over', false);
   }
