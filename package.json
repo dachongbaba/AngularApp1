@@ -15,7 +15,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "format:fix": "pretty-quick --staged",
-    "format:check": "prettier --config ./.prettierrc --list-different \"src/{app,environments,assets}/**/*{.ts,.js,.json,.css,.scss}\""
+    "format:check": "prettier --config ./.prettierrc --list-different \"src/{app,environments,assets}/**/*{.ts,.js,.json,.css,.scss}\"",
+    "publish": "ng build --prod --base-href \"https://dachongbaba.github.io/AngularApp1\""
   },
   "private": true,
   "dependencies": {
@@ -46,6 +47,7 @@
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
+    "angular-cli-ghpages": "^0.5.3",
     "codelyzer": "~4.5.0",
     "eslint": "^5.16.0",
     "eslint-plugin-angular": "^4.0.0",
